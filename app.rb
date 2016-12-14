@@ -1,7 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "active_record"
-require 'ffaker'
+require "ffaker"
 
 # Load the file to connect to the DB
 require_relative "db/connection"
@@ -12,6 +12,6 @@ require_relative 'models/trainer'
 
 
 get '/pokemon' do
-  @pokemon = Pokemon.all
+  @pokemons = Pokemon.all
   erb :'pokemon/index'
 end
